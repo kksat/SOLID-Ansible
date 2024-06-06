@@ -1,5 +1,6 @@
 ---
 name: example
+namespace: solid
 version: 1.0.0
 readme: README.md
 authors:
@@ -12,6 +13,7 @@ tags:
   - example
   - ansible
   - SOLID
+  - linux
 
 dependencies: {}
 repository: https://github.com/kksat/SOLID-Ansible.git
