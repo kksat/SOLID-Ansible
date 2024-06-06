@@ -1,0 +1,18 @@
+---
+name: example
+version: 1.0.0
+readme: README.md
+authors:
+  - Kirill Satarin (@kksat)
+description: Ansiblle content example for talk Enhancing Ansible Development with SOLID Principles
+license:
+  - GPL-3.0-only
+
+tags:
+  - example
+  - ansible
+  - SOLID
+
+dependencies: {}
+repository: https://github.com/kksat/SOLID-Ansible.git
+build_ignore: []
