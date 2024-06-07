@@ -1,0 +1,9 @@
+---
+- name: Test sample role
+  hosts: localhost
+  gather_facts: false
+  vars: {}
+  tasks:
+    - name: Run sample role
+      ansible.builtin.include_role:
+        name: solid.example.sample_role
