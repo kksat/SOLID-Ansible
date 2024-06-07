@@ -5,7 +5,7 @@ version: 1.0.0
 readme: README.md
 authors:
   - Kirill Satarin (@kksat)
-description: Ansiblle content example for talk Enhancing Ansible Development with SOLID Principles
+description: Ansible content example for talk Enhancing Ansible Development with SOLID Principles
 license:
   - GPL-3.0-only
 
