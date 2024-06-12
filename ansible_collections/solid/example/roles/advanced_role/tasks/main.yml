@@ -1,0 +1,8 @@
+---
+- name: Hello DevConf
+  ansible.builtin.debug:
+    var: advanced_role_public_var
+
+- name: This is interesting
+  ansible.builtin.debug:
+    var: advanced_role_private_var
