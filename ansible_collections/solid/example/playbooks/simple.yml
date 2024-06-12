@@ -6,4 +6,4 @@
   tasks:
     - name: Run sample role
       ansible.builtin.include_role:
-        name: solid.example.sample_role
+        name: solid.example.simple_role
