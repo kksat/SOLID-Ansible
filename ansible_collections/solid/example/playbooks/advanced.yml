@@ -1,0 +1,23 @@
+---
+- name: Run advanced role playbook
+  hosts: localhost
+  gather_facts: false
+  vars:
+    advanced_role_public_var: This is value from playbook
+    advanced_role_private_var: You will not see this printed
+  tasks:
+    - name: Set public variable
+      ansible.builtin.include_role:
+        name: solid.example.advanced_role
+      vars:
+        advanced_role_public_var: This is value from include_role
+
+    - name: Try to set private variable for the role with set_fact
+      ansible.builtin.set_fact:
+        advanced_role_private_var: This does not change private variable
+
+    - name: Set private variable
+      ansible.builtin.include_role:
+        name: solid.example.advanced_role
+      vars:
+        advanced_role_private_var: But this will be printed
