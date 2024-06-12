@@ -1,8 +1,8 @@
 ---
 - name: This role contains only one task
   ansible.builtin.template:
-    src: "{{ sample_role_template }}"
-    dest: "{{ sample_role_filename }}"
+    src: "{{ simple_role_template }}"
+    dest: "{{ simple_role_filename }}"
     mode: "{{ omit }}"
     owner: "{{ omit }}"
   notify: Message
