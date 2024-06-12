@@ -6,6 +6,12 @@
     advanced_role_public_var: This is value from playbook
     advanced_role_private_var: You will not see this printed
   tasks:
+    - name: Show copyright
+      solid.example.show_c:
+
+    - name: Show warranty
+      solid.example.show_w:
+
     - name: Set public variable
       ansible.builtin.include_role:
         name: solid.example.advanced_role
