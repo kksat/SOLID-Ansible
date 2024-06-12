@@ -1,12 +1,11 @@
 from __future__ import absolute_import, division, print_function
-from datetime import date
 
-__metaclass__ = type
+_metaclass__ = type
 
 from ansible.utils.display import Display
 from ansible.plugins.action import ActionBase
 
-WARRANTY = f"""
+WARRANTY = """
 Copyright 2024 Kirill Satarin (@kksat)
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU

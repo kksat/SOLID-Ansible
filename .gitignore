@@ -1,3 +1,3 @@
 .venv
 .tox
-ansible_collections/solid/example/roles/sample_role/tests/sample_role.txt
+__pycache__
