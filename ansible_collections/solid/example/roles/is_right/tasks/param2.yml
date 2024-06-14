@@ -1,0 +1,4 @@
+---
+- name: Run is_right with param2
+  ansible.builtin.debug:
+    msg: "param2 - {{ is_right_2 }}"

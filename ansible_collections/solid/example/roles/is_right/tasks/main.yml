@@ -1,0 +1,15 @@
+---
+- name: Run is_right with param1
+  ansible.builtin.include_role:
+    name: solid.example.is_right
+    tasks_from: param1
+
+- name: Run is_right with param2
+  ansible.builtin.include_role:
+    name: solid.example.is_right
+    tasks_from: param2
+
+- name: Run is_right with param3
+  ansible.builtin.include_role:
+    name: solid.example.is_right
+    tasks_from: param3
