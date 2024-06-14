@@ -1,0 +1,4 @@
+---
+- name: Run tasks depending on ansible_os_family
+  ansible.builtin.include_tasks:
+    file: "tasks/{{ ansible_os_family | lower }}.yml"

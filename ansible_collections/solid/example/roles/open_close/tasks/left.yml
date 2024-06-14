@@ -1,0 +1,15 @@
+---
+- name: Run tasks for RHEL
+  ansible.builtin.include_tasks:
+    file: tasks/redhat.yml
+  when: ansible_os_family == 'RedHat'
+
+- name: Run tasks for SUSE
+  ansible.builtin.include_tasks:
+    file: tasks/suse.yml
+  when: ansible_os_family == 'Suse'
+
+- name: Run tasks for Debian
+  ansible.builtin.include_tasks:
+    file: tasks/debian.yml
+  when: ansible_os_family == 'Debian'

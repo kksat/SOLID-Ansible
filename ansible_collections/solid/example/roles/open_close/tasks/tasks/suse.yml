@@ -1,0 +1,4 @@
+---
+- name: Tasks for Suse
+  ansible.builtin.debug:
+    msg: Running tasks for Suse

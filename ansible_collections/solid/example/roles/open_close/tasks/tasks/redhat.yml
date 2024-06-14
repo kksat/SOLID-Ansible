@@ -1,0 +1,4 @@
+---
+- name: Tasks for RHEL
+  ansible.builtin.debug:
+    msg: Running tasks for RHEL
