@@ -9,3 +9,7 @@ ansible-lint: .venv/bin/activate  ## Run ansible-lint
 
 %:  ## Run tox with the specified environment
 	. .venv/bin/activate && tox -e $*
+
+.PHONY: clean
+clean: ## Clean all generated file
+	rm ./ansible_collections/solid/example/playbooks/*.txt
