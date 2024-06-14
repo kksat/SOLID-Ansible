@@ -1,3 +1,4 @@
 .venv
 .tox
 __pycache__
+ansible_collections/solid/example/playbooks/*.txt
