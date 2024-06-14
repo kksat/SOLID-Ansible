@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 class PayPalProcessor:
     def process_payment(self, amount: float):
         print(f"Processing payment of ${amount} through PayPal.")
