@@ -1,0 +1,7 @@
+---
+- name: Run role is_left with several parameters
+  ansible.builtin.debug:
+    msg:
+      - "param1 - {{ is_left_1 }}"
+      - "param2 - {{ is_left_2 }}"
+      - "param3 - {{ is_left_3 }}"

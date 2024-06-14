@@ -1,0 +1,29 @@
+---
+argument_specs:
+  main:
+    short_description: Ansible role to demonstrate interface segregation SOLID principle
+    description: Ansible role to demonstrate interface segregation SOLID principle
+    options:
+      is_left_1:
+        description: Parameter for role is_left
+        type: str
+        required: true
+        choices:
+          - one
+          - two
+
+      is_left_2:
+        description: Parameter for role is_left
+        type: str
+        required: true
+        choices:
+          - alfa
+          - beta
+
+      is_left_3:
+        description: Parameter for role is_left
+        type: str
+        required: true
+        choices:
+          - a
+          - b

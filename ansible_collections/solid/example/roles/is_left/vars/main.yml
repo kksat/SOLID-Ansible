@@ -1,0 +1,20 @@
+---
+srp_packages:
+  - name: sudo
+    version: 1.9.5p2-10
+  - name: gcc
+    version: 11.4.1-3
+  - name: python3
+    version: 3.9.18
+
+srp_kernel_parameters:
+  - key:
+    value:
+
+srp_services:
+  - name: kdump
+    enabled: false
+    state: stopped
+  - name: firewalld
+    enabled: false
+    state: stopped
