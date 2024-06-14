@@ -1,0 +1,30 @@
+---
+- name: Run examples to illustrate interface segregation principle in ansible
+  hosts: localhost
+  gather_facts: false
+  vars: {}
+  tasks:
+    - name: Show copyright
+      solid.example.show_c:
+      run_once: true
+
+    - name: Show warranty
+      solid.example.show_w:
+      run_once: true
+
+    - name: Run is_left role
+      ansible.builtin.include_role:
+        name: solid.example.is_left
+      loop: "{{ all_possible_parameter_values }}"
+      loop_control:
+        loop_var: param
+      vars:
+        all_possible_parameter_values: >
+          {{
+          ['one', 'two']
+          | product(['alfa', 'beta'])
+          | product(['a', 'b'])
+          }}
+        is_left_1: "{{ param[0][0] }}"
+        is_left_2: "{{ param[0][1] }}"
+        is_left_3: "{{ param[1][0] }}"
