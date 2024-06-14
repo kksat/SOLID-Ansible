@@ -1,0 +1,10 @@
+---
+- name: Make sure packages are installed
+  ansible.builtin.include_role:
+    name: solid.example.dependency_inversion
+    tasks_from: install-bin
+
+- name: Make sure application is deployed
+  ansible.builtin.include_role:
+    name: solid.example.dependency_inversion
+    tasks_from: deploy

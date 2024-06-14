@@ -1,0 +1,34 @@
+---
+- name: Make sure packages are installed
+  ansible.builtin.lineinfile:
+    name: bindep.txt
+    create: true
+    line: "{{ package.name }}=={{ package.version }}"
+    owner: "{{ omit }}"
+    mode: "{{ omit }}"
+  loop: "{{ dependency_inversion_packages }}"
+  loop_control:
+    loop_var: package
+
+- name: Deploy application
+  ansible.builtin.debug:
+    msg:
+      - "Application deployed with following package versions"
+      - "{{ lookup('ansible.builtin.file', 'bindep.txt') | split('\n') }}"
+
+- name: Make sure pip packages are installed
+  ansible.builtin.lineinfile:
+    name: requirements.txt
+    create: true
+    line: "{{ package.name }}=={{ package.version }}"
+    owner: "{{ omit }}"
+    mode: "{{ omit }}"
+  loop: "{{ dependency_inversion_pip_packages }}"
+  loop_control:
+    loop_var: package
+
+- name: Deploy application
+  ansible.builtin.debug:
+    msg:
+      - "Application deployed with following package versions"
+      - "{{ lookup('ansible.builtin.file', 'requirements.txt') | split('\n') }}"

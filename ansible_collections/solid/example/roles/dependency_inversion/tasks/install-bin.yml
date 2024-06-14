@@ -1,0 +1,11 @@
+---
+- name: Make sure packages are installed
+  ansible.builtin.lineinfile:
+    name: bindep.txt
+    create: true
+    line: "{{ package.name }}=={{ package.version }}"
+    owner: "{{ omit }}"
+    mode: "{{ omit }}"
+  loop: "{{ dependency_inversion_packages }}"
+  loop_control:
+    loop_var: package

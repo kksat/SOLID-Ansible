@@ -1,0 +1,11 @@
+---
+- name: Make sure pip packages are installed
+  ansible.builtin.lineinfile:
+    name: requirements.txt
+    create: true
+    line: "{{ package.name }}=={{ package.version }}"
+    owner: "{{ omit }}"
+    mode: "{{ omit }}"
+  loop: "{{ dependency_inversion_pip_packages }}"
+  loop_control:
+    loop_var: package

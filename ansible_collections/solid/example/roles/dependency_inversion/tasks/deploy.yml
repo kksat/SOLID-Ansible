@@ -1,0 +1,9 @@
+---
+- name: Deploy application
+  ansible.builtin.debug:
+    msg:
+      - "Application deployed with following package versions"
+      - "{{ lookup('ansible.builtin.file', item) | split('\n') }}"
+  with_first_found:
+    - bindep.txt
+    - requirements.txt
