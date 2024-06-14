@@ -1,0 +1,16 @@
+---
+- name: Run left examples to illustrate open closed principle in ansible
+  hosts: all
+  gather_facts: false
+  vars: {}
+  tasks:
+    - name: Show copyright
+      solid.example.show_c:
+
+    - name: Show warranty
+      solid.example.show_w:
+
+    - name: Run open_close role
+      ansible.builtin.include_role:
+        name: solid.example.open_close
+        tasks_from: left.yml
