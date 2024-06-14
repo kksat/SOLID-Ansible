@@ -1,0 +1,6 @@
+---
+- name: This entry point only requires left param
+  ansible.builtin.debug:
+    var: liskov_substitution_right
+  vars:
+    liskov_substitution_right: "{{ liskov_substitution_param }}"

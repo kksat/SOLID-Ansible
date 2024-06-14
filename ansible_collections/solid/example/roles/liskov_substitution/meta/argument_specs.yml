@@ -1,0 +1,26 @@
+---
+argument_specs:
+  main:
+    short_description: Ansible role to demonstrate Liskov substitution SOLID principle
+    description: Ansible role to demonstrate Liskov substitution SOLID principle
+    options:
+      liskov_substitution_param:
+        description: Parameter for role liskov_substitution
+        type: str
+        required: true
+  left:
+    short_description: Ansible role to demonstrate Liskov substitution SOLID principle
+    description: Ansible role to demonstrate Liskov substitution SOLID principle
+    options:
+      liskov_substitution_left:
+        description: Parameter for role liskov_substitution
+        type: str
+        required: true
+  right:
+    short_description: Ansible role to demonstrate Liskov substitution SOLID principle
+    description: Ansible role to demonstrate Liskov substitution SOLID principle
+    options:
+      liskov_substitution_right:
+        description: Parameter for role liskov_substitution
+        type: str
+        required: true
