@@ -1,0 +1,17 @@
+---
+- name: Run examples to illustrate single responsibility principle in ansible
+  hosts: all
+  gather_facts: false
+  vars: {}
+  tasks:
+    - name: Show copyright
+      solid.example.show_c:
+      run_once: true
+
+    - name: Show warranty
+      solid.example.show_w:
+      run_once: true
+
+    - name: Run srp_right role
+      ansible.builtin.include_role:
+        name: solid.example.srp_right
