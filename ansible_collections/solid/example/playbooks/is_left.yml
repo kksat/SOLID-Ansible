@@ -1,0 +1,21 @@
+---
+- name: Run examples to illustrate single responsibility principle in ansible
+  hosts: localhost
+  gather_facts: false
+  vars: {}
+  tasks:
+    - name: Show copyright
+      solid.example.show_c:
+      run_once: true
+
+    - name: Show warranty
+      solid.example.show_w:
+      run_once: true
+
+    - name: Run is_left role
+      ansible.builtin.include_role:
+        name: solid.example.is_left
+      vars:
+        is_left_1: one
+        is_left_2: alfa
+        is_left_3: a
