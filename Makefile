@@ -13,3 +13,7 @@ ansible-lint: .venv/bin/activate  ## Run ansible-lint
 .PHONY: clean
 clean: ## Clean all generated file
 	rm ./ansible_collections/solid/example/playbooks/*.txt
+
+.PHONY: playbooks
+playbooks: ## Show all available playbooks
+	@ls -1 ansible_collections/solid/example/playbooks | sed '/\.yml/!d' | sed 's/.yml//g'
