@@ -1,6 +1,8 @@
 ---
 srp_packages:
+  - name: sudo
+    version: 1.9.5p2-10
+  - name: gcc
+    version: 11.4.1-3
   - name: python3
-    version: 3.11.7
-  - name: package
-    version: 1.0.0
+    version: 3.9.18
