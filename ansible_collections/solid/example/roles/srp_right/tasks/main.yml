@@ -1,0 +1,12 @@
+---
+- name: Make sure packages are present
+  ansible.builtin.include_role:
+    name: solid.example.srp_packages
+
+- name: Notify administrators
+  ansible.builtin.include_role:
+    name: solid.example.srp_notify
+
+- name: Add host to CMDB
+  ansible.builtin.include_role:
+    name: solid.example.srp_cmdb

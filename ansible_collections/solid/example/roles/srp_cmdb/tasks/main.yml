@@ -1,0 +1,6 @@
+---
+- name: Add host to CMDB
+  ansible.builtin.lineinfile:
+    name: CMDB.txt
+    line: "{{ inventory_hostname }}"
+    create: true
