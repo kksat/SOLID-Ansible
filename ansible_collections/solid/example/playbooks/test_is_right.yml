@@ -1,0 +1,43 @@
+---
+- name: Run examples to illustrate interface segregation principle in ansible
+  hosts: localhost
+  gather_facts: false
+  vars: {}
+  tasks:
+    - name: Show copyright
+      solid.example.show_c:
+      run_once: true
+
+    - name: Show warranty
+      solid.example.show_w:
+      run_once: true
+
+    - name: Run is_right role entry point param1
+      ansible.builtin.include_role:
+        name: solid.example.is_right
+        tasks_from: param1
+      loop:
+        - one
+        - two
+      loop_control:
+        loop_var: is_right_1
+
+    - name: Run is_right role entry point param2
+      ansible.builtin.include_role:
+        name: solid.example.is_right
+        tasks_from: param2
+      loop:
+        - alfa
+        - beta
+      loop_control:
+        loop_var: is_right_2
+
+    - name: Run is_right role entry point param3
+      ansible.builtin.include_role:
+        name: solid.example.is_right
+        tasks_from: param3
+      loop:
+        - a
+        - b
+      loop_control:
+        loop_var: is_right_3
