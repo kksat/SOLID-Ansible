@@ -2,8 +2,8 @@
 - name: Notify administrators
   ansible.builtin.debug:
     msg:
-      - "TO: {{ srp_host_admin }}"
+      - "TO: {{ admin }}"
       - "Subject: Host {{ inventory_hostname }} provisioned."
-  loop: "{{ srp_host_admins }}"
+  loop: "{{ srp_notify_host_admins }}"
   loop_control:
-    loop_var: srp_host_admin
+    loop_var: admin

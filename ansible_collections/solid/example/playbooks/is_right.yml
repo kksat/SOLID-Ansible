@@ -1,14 +1,17 @@
 ---
 - name: Run examples to illustrate single responsibility principle in ansible
   hosts: localhost
+  strategy: linear
   gather_facts: false
   vars: {}
   tasks:
-    - name: Show copyright
+    - name: Show copyright # noqa: run-once[task]
       solid.example.show_c:
+      run_once: true
 
-    - name: Show warranty
+    - name: Show warranty # noqa: run-once[task]
       solid.example.show_w:
+      run_once: true
 
     - name: Run is_right role
       ansible.builtin.include_role:

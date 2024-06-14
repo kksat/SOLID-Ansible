@@ -4,6 +4,8 @@
     name: "{{ inventory_hostname }} - packages.txt"
     create: true
     line: "{{ package.name }}=={{ package.version }}"
-  loop: "{{ srp_packages }}"
+    owner: "{{ omit }}"
+    mode: "{{ omit }}"
+  loop: "{{ srp_packages_list }}"
   loop_control:
     loop_var: package

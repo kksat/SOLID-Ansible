@@ -6,11 +6,13 @@
     advanced_role_public_var: This is value from playbook
     advanced_role_private_var: You will not see this printed
   tasks:
-    - name: Show copyright
+    - name: Show copyright # noqa: run-once[task]
       solid.example.show_c:
+      run_once: true
 
-    - name: Show warranty
+    - name: Show warranty # noqa: run-once[task]
       solid.example.show_w:
+      run_once: true
 
     - name: Set public variable
       ansible.builtin.include_role:

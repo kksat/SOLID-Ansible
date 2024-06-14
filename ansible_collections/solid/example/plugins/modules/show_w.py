@@ -21,7 +21,7 @@ options: {}
 
 EXAMPLES = r"""
 ---
-- name: Show warranty
+- name: Show warranty # noqa: run-once[task]
   sap.sap_operations.show_w:
 """
 

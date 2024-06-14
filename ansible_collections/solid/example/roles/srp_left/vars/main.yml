@@ -1,5 +1,5 @@
 ---
-srp_packages:
+srp_left_packages:
   - name: sudo
     version: 1.9.5p2-10
   - name: gcc
@@ -7,5 +7,5 @@ srp_packages:
   - name: python3
     version: 3.9.18
 
-srp_host_admins:
+srp_left_host_admins:
   - admin@solid.example

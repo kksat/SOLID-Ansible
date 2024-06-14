@@ -21,7 +21,7 @@ options: {}
 
 EXAMPLES = r"""
 ---
-- name: Show copyright
+- name: Show copyright # noqa: run-once[task]
   solid.example.show_c:
 """
 

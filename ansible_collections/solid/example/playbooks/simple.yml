@@ -4,11 +4,13 @@
   gather_facts: false
   vars: {}
   tasks:
-    - name: Show copyright
+    - name: Show copyright # noqa: run-once[task]
       solid.example.show_c:
+      run_once: true
 
-    - name: Show warranty
+    - name: Show warranty # noqa: run-once[task]
       solid.example.show_w:
+      run_once: true
 
     - name: Run sample role
       ansible.builtin.include_role:

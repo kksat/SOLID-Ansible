@@ -4,3 +4,5 @@
     name: CMDB.txt
     line: "{{ inventory_hostname }}"
     create: true
+    owner: "{{ omit }}"
+    mode: "{{ omit }}"

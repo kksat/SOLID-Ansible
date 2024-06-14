@@ -1,5 +1,5 @@
 ---
-srp_packages:
+srp_packages_list:
   - name: sudo
     version: 1.9.5p2-10
   - name: gcc

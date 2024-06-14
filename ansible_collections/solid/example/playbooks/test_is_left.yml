@@ -4,22 +4,22 @@
   gather_facts: false
   vars: {}
   tasks:
-    - name: Show copyright
+    - name: Show copyright # noqa: run-once[task]
       solid.example.show_c:
       run_once: true
 
-    - name: Show warranty
+    - name: Show warranty # noqa: run-once[task]
       solid.example.show_w:
       run_once: true
 
     - name: Run is_left role
       ansible.builtin.include_role:
         name: solid.example.is_left
-      loop: "{{ all_possible_parameter_values }}"
+      loop: "{{ is_left_all_possible_parameter_values }}"
       loop_control:
         loop_var: param
       vars:
-        all_possible_parameter_values: >
+        is_left_all_possible_parameter_values: >
           {{
           ['one', 'two']
           | product(['alfa', 'beta'])
