@@ -1,0 +1,20 @@
+---
+- name: Run right examples to illustrate 'Liskov substitution' principle in ansible
+  hosts: all
+  gather_facts: false
+  vars: {}
+  tasks:
+    - name: Show copyright
+      solid.example.show_c:
+      run_once: true
+
+    - name: Show warranty
+      solid.example.show_w:
+      run_once: true
+
+    - name: Run liskov_substitution role
+      ansible.builtin.include_role:
+        name: solid.example.liskov_substitution
+        tasks_from: right
+      vars:
+        liskov_substitution_right: Hello DevConf 2024!
