@@ -17,3 +17,7 @@ clean: ## Clean all generated file
 .PHONY: playbooks
 playbooks: ## Show all available playbooks
 	@ls -1 ansible_collections/solid/example/playbooks | sed '/\.yml/!d' | sed 's/.yml//g'
+
+.PHONY: help
+help: ## Show this help
+	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
