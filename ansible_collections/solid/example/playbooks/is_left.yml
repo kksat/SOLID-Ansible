@@ -1,7 +1,6 @@
 ---
 - name: Run examples to illustrate single responsibility principle in ansible
   hosts: localhost
-  strategy: linear
   gather_facts: false
   vars: {}
   tasks:
