@@ -11,7 +11,7 @@ ansible-lint: .venv/bin/activate  ## Run ansible-lint
 	. .venv/bin/activate && tox exec -e run -- ansible-playbook -i ansible_collections/solid/example/inventory.ini ansible_collections/solid/example/playbooks/$*.yml
 
 .PHONY: clean
-clean: ## Clean all generated file
+clean: ## Clean all generated files
 	rm ./ansible_collections/solid/example/playbooks/*.txt
 
 .PHONY: playbooks
