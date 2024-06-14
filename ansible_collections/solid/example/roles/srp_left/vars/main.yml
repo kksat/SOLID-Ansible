@@ -1,0 +1,9 @@
+---
+srp_packages:
+  - name: python3
+    version: 3.11.7
+  - name: package
+    version: 1.0.0
+
+srp_host_admins:
+  - admin@solid.example

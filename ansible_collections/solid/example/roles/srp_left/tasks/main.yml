@@ -1,0 +1,24 @@
+---
+- name: Make sure packages are present
+  ansible.builtin.lineinfile:
+    name: "{{ inventory_hostname }} - packages.txt"
+    create: true
+    line: "{{ package.name }}=={{ package.version }}"
+  loop: "{{ srp_packages }}"
+  loop_control:
+    loop_var: package
+
+- name: Notify administrators
+  ansible.builtin.debug:
+    msg:
+      - "TO: {{ srp_host_admin }}"
+      - "Subject: Host {{ inventory_hostname }} provisioned."
+  loop: "{{ srp_host_admins }}"
+  loop_control:
+    loop_var: srp_host_admin
+
+- name: Add host to CMDB
+  ansible.builtin.lineinfile:
+    name: CMDB.txt
+    line: "{{ inventory_hostname }}"
+    create: true
