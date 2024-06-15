@@ -1,6 +1,6 @@
 # Enhancing Ansible Development with SOLID Principles
 
-Code for talk given by Kirill Satarin at DevConf 2024.
+Code examples for the talk given by Kirill Satarin at DevConf 2024.
 
 ## Abstract
 
