@@ -1,6 +1,6 @@
 ---
 - name: Run right examples to illustrate 'Liskov substitution' principle in ansible
-  hosts: all
+  hosts: localhost
   gather_facts: false
   vars: {}
   tasks:
