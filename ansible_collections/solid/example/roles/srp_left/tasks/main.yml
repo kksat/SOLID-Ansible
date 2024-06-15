@@ -19,7 +19,7 @@
   loop_control:
     loop_var: admin
 
-- name: Add host to CMDB
+- name: Add host to change management database
   ansible.builtin.lineinfile:
     name: CMDB.txt
     line: "{{ inventory_hostname }}"
