@@ -12,6 +12,6 @@
       solid.example.show_w:
       run_once: true
 
-    - name: Run sample role
+    - name: Run simple role
       ansible.builtin.include_role:
         name: solid.example.simple_role
