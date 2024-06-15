@@ -1,0 +1,11 @@
+---
+- name: This is the main entry point
+  ansible.builtin.debug:
+    var: liskov_substitution_param
+
+- name: Include tasks from the task file
+  ansible.builtin.include_role:
+    name: solid.example.liskov_substitution
+    tasks_from: right
+  vars:
+    liskov_substitution_right: "{{ liskov_substitution_param }}"

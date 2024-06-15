@@ -14,7 +14,7 @@
 
     - name: Run liskov_substitution role
       ansible.builtin.include_role:
-        name: solid.example.liskov_substitution
+        name: solid.example.liskov_substitution_right
         tasks_from: right
       vars:
-        liskov_substitution_right: Hello DevConf 2024!
+        liskov_substitution_right_param: Hello DevConf 2024!

@@ -1,0 +1,8 @@
+---
+- name: This entry point only requires left param
+  ansible.builtin.debug:
+    var: liskov_substitution_left_param
+
+- name: Example for failed 'Liskov substituion' for Ansible role
+  ansible.builtin.debug:
+    var: liskov_substitution_left_main
