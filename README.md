@@ -14,4 +14,4 @@ Target Audience: Individuals interested in optimizing their Ansible content deve
 
 ## Slide Deck
 
-<iframe class="speakerdeck-iframe" frameborder="0" src="https://speakerdeck.com/player/18118db09f2e4b68bc58421767bd789a" title="Enhancing Ansible Development with SOLID Principles" allowfullscreen="true" style="border: 0px; background: padding-box padding-box rgba(0, 0, 0, 0.1); margin: 0px; padding: 0px; border-radius: 6px; box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 40px; width: 100%; height: auto; aspect-ratio: 560 / 315;" data-ratio="1.7777777777777777"></iframe>
+[Enhancing Ansible Development with SOLID Principles](https://speakerdeck.com/kksat/enhancing-ansible-development-with-solid-principles)
