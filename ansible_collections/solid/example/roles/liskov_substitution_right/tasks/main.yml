@@ -1,7 +1,7 @@
 ---
 - name: This is the main entry point
   ansible.builtin.debug:
-    var: liskov_substitution_param
+    var: liskov_substitution_right_param
 
 - name: Include tasks from the task file
   ansible.builtin.include_role:
