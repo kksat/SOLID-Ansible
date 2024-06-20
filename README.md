@@ -15,3 +15,7 @@ Target Audience: Individuals interested in optimizing their Ansible content deve
 ## Slide Deck
 
 [Enhancing Ansible Development with SOLID Principles](https://speakerdeck.com/kksat/enhancing-ansible-development-with-solid-principles)
+
+## Video
+
+<https://youtu.be/hA_BdkL4Wu4>
