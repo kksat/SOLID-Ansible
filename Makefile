@@ -7,7 +7,7 @@
 ansible-lint: .venv/bin/activate  ## Run ansible-lint
 	. .venv/bin/activate && tox -e ansible-lint
 
-%:  ## Run tox with the specified environment
+%: .venv/bin/activate  ## Run tox with the specified environment
 	. .venv/bin/activate && tox exec -e run -- ansible-playbook -i ansible_collections/solid/example/inventory.ini ansible_collections/solid/example/playbooks/$*.yml
 
 .PHONY: clean
