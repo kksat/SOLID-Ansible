@@ -19,3 +19,7 @@ Target Audience: Individuals interested in optimizing their Ansible content deve
 ## Video
 
 <https://youtu.be/hA_BdkL4Wu4>
+
+## Conference page
+
+<https://pretalx.com/devconf-cz-2024/talk/HUWMAX/>
