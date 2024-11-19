@@ -1,4 +1,9 @@
 ---
 - name: Run tasks depending on ansible_os_family
   ansible.builtin.include_tasks:
-    file: "tasks/{{ ansible_os_family | lower }}.yml"
+    file: "{{ task_file }}"
+  with_first_found:
+    - "tasks/{{ ansible_os_family | lower }}.yml"
+    - "tasks/unsupported.yml"
+  loop_control:
+    loop_var: task_file

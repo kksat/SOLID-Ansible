@@ -1,0 +1,4 @@
+---
+- name: Unsupported platform
+  ansible.builtin.debug:
+    msg: This platfor is not supported
